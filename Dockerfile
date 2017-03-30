@@ -1,7 +1,7 @@
 FROM debian:wheezy
 MAINTAINER adronhall@gmail.com
 
-# Install pygments for syntax highlighting
+# Install pygments for syntax highlighting code.
 RUN apt-get -qq update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get -qq install -y --no-install-recommends python-pygments git ca-certificates \
 	&& rm -rf /var/lib/apt/lists/*
