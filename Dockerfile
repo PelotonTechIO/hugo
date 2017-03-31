@@ -20,5 +20,6 @@ COPY /site /usr/share/blog
 
 #CMD ["/run.sh"]
 
-RUN hugo server --port 3000
 EXPOSE 3000
+
+#RUN hugo server --port 3000

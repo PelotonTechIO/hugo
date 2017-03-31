@@ -14,7 +14,10 @@ docker build . adron/hugo
 In detached mode.
 
 ```
-docker run -d -p 1313:1313 adron/hugo hugo server
+docker run -d -t -p 3000:3000 adron/hugo hugo server --port 3000
 ```
 
-docker run -i -t adron/hugo bash
+In interactive mode.
+```
+docker run -i -t -p 3000:3000 adron/hugo hugo server 
+```
