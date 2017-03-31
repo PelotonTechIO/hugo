@@ -11,7 +11,7 @@ RUN apk add --update wget ca-certificates && \
   apk del wget ca-certificates && \
   rm /var/cache/apk/*
 
-COPY ./run.sh /run.sh
+#COPY ./run.sh /run.sh
 
 RUN mkdir /usr/share/blog
 WORKDIR /usr/share/blog
