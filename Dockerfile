@@ -13,10 +13,12 @@ RUN apk add --update wget ca-certificates && \
 
 COPY ./run.sh /run.sh
 
-VOLUME /src
-VOLUME /output
+RUN mkdir /usr/share/blog
+WORKDIR /usr/share/blog
 
-WORKDIR /src
-CMD ["/run.sh"]
+COPY /site /usr/share/blog
 
-EXPOSE 1313
+#CMD ["/run.sh"]
+
+RUN hugo server --port 3000
+EXPOSE 3000
